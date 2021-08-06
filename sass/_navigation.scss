@@ -1,0 +1,21 @@
+a {
+  color: var(--link-color);
+  transition: color 0.1s ease-out;
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
+.site-navigation {
+  padding: 1rem 0;
+  a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+}

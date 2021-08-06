@@ -1,0 +1,21 @@
+.news-list {
+  margin: 2rem 0;
+}
+
+.news-item {
+  &__title {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px dashed $orange;
+  }
+}

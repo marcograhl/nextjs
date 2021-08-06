@@ -1,0 +1,34 @@
+body {
+  background: $dark-purple;
+  color: white;
+}
+
+.site-wrapper {
+  /*   "Sticky Footer": Sorgt dafür, dass der Footer am unteren Bildschirmrand ist,
+        wenn es nicht genügend Inhalt gibt, um ihn nach unten zu drücken.
+        .page ist ein div um die gesamte Seite herum. */
+  display: flex;
+  // column ordnet die Inhalte der Seite normal von oben nach unten an
+  flex-direction: column;
+  /*   Mindesthöhe des gesamten Inhalts: 100% der "viewport height", d.h.
+        des Bildschirms. */
+  min-height: 100vh;
+}
+
+.site-main {
+  /*   Teil des Sticky Footers: Sorgt dafür, dass der "mittlere" Bereich, also der Inhalt
+    anwächst, falls freier Platz zwischen Inhalt und Footer besteht.
+    Eigentlich würde auch flex: 1; genügen, aber der alte Internet Explorer
+    hat einen Bug... Ist heute zum Glück nicht mehr sehr relevant, aber bei
+    Problemen ist hier eine Übersicht zu Bugs und möglichen Lösungen zu finden:
+    https://github.com/philipwalton/flexbugs */
+  flex: 1 0 auto;
+}
+
+.inner-width {
+  width: 100%;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
